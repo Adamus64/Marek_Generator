@@ -1,0 +1,153 @@
+/* ==========================================
+   1. ZÁKLADNÍ STYLY (Mobilní zařízení / Mobile First)
+   ========================================== */
+
+* {
+    box-sizing: border-box; /* Opraveno z '-' na '*' */
+}
+
+body {
+    margin: 0;
+    padding: 1rem 1rem 4rem 1rem; /* Spodní padding 4rem zabrání překrytí obsahu footerem */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #000000; 
+    color: hsl(0, 0%, 100%);
+}
+
+h1 {
+    font-size: 1.8rem; 
+    text-decoration: underline;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+/* Základní styl pro #textBox na mobilu */
+#textBox {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    max-width: 100%;
+    word-wrap: break-word; /* Zabrání přetékání dlouhého textu na mobilu */
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    max-width: 100%;
+}
+
+/* Efekt při najetí a kliknutí na tlačítko */
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Základní styl pro Footer (Mobil) */
+footer {
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0.8rem 1rem; /* Odsazení textu od okrajů lišty */
+    background-color: rgba(34, 6, 118, 0);
+    color: white;
+    font-size: 1rem;
+    font-weight: 800;
+    z-index: 1000; /* Zaručí, že bude footer vždy nahoře nad ostatními prvky */
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: #ff0000; /* Světlejší modrá pro lepší čitelnost na tmavém pozadí */
+}
+
+
+/* ==========================================
+   2. TABLETY (od 768px)
+   ========================================== */
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    button {
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+    }
+
+    #textBox {
+        font-size: 2.5rem; /* Zvoleno 2.5rem pro logickou posloupnost */
+    }
+
+    footer {
+        font-size: 1.25rem;
+        padding: 1rem;
+    }
+}
+
+
+/* ==========================================
+   3. NOTEBOOKY / MENŠÍ MONITORY (od 1024px)
+   ========================================== */
+@media screen and (min-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    button {
+        padding: 1.2rem 2.5rem;
+        font-size: 1.8rem;
+    }
+
+    #textBox {
+        font-size: 3rem;
+    }
+
+    footer {
+        font-size: 1.4rem;
+    }
+}
+
+
+/* ==========================================
+   4. VELKÉ MONITORY (od 1200px)
+   ========================================== */
+@media screen and (min-width: 1200px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    button {
+        padding: 1.5rem 3rem;
+        font-size: 2rem;
+    }
+
+    #textBox {
+        font-size: 3.5rem;
+    }
+
+    footer {
+        font-size: 1.5rem;
+    }
+}
